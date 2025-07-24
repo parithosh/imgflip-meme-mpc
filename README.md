@@ -44,7 +44,13 @@ python test_mens_warehouse.py
 
 ### 4. Configure with Claude
 
-Add to your Claude MCP configuration:
+Quick setup (run from the project directory):
+```bash
+cd /path/to/imgflip-meme-mcp
+claude mcp add imgflip-meme "uv run -m imgflip_meme_mcp.server"
+```
+
+Or manually add to your Claude MCP configuration:
 
 ```json
 {
