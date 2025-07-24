@@ -21,7 +21,7 @@ git clone <your-repo-url>
 cd imgflip-meme-mcp
 python3 -m venv venv
 source venv/bin/activate
-pip install -e .
+uv pip install -e .
 ```
 
 ### 2. Get Imgflip Credentials
@@ -50,8 +50,8 @@ Add to your Claude MCP configuration:
 {
   "mcpServers": {
     "imgflip-meme": {
-      "command": "python",
-      "args": ["-m", "imgflip_meme_mcp.server"],
+      "command": "uv",
+      "args": ["run", "-m", "imgflip_meme_mcp.server"],
       "cwd": "/path/to/imgflip-meme-mcp"
     }
   }
@@ -94,7 +94,7 @@ The MCP server exposes these tools to Claude:
 
 ```bash
 # Install dev dependencies
-pip install -e ".[dev]"
+uv pip install -e ".[dev]"
 
 # Format code
 black src/

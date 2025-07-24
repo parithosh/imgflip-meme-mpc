@@ -44,3 +44,5 @@ Thumbs.db
 
 # Project specific
 template_cache.json
+uv.lock
+CLAUDE.md
